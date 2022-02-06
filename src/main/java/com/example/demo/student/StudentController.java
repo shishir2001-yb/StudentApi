@@ -54,7 +54,7 @@ public class StudentController {
     }
 
 
-//    http://localhost:8080/api/v1/student/
+//    http://localhost:8080/api/v1/student/1
     @DeleteMapping(path="{studentId}")
     public void deleteStudent(@PathVariable("studentId") Long studentId)
     {
@@ -67,7 +67,7 @@ public class StudentController {
 //    http://localhost:8080/api/v1/student/1?name=shishir2&email=shishirchanged@gmail.com
 //      http://localhost:8080/api/v1/student/1?name=shishir2
 //
-    @PutMapping(path = {"studentId"})
+    @PutMapping(path="{studentId}")
     public void updateStudent(
             @PathVariable("studentId") Long studentId,
             @RequestParam(required = false) String name,
